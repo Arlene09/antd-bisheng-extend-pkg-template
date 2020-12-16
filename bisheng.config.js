@@ -1,3 +1,5 @@
+const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
+
 const alertLessConfig = (rules) => {
   rules.forEach((rule) => {
     if (rule.loader && rule.loader.includes('less-loader')) {
@@ -45,19 +47,15 @@ module.exports = {
     packages: './packages'
   },
   output: './docs',
-  theme: '@doddle/doddle-bisheng-theme',
+  theme: './theme',
+  htmlTemplate: './theme/static/template.html',
   entiryName: 'index',
+  root: filePath,
   themeConfig: {
     home: '/guide/introduce',
-    root: filePath,
-    combineChangelog: false,
-    compSorterType: 'native',
-    title: 'react组件库包',
-    friendLinks: [
-      { name: 'antd', link: 'https://ant-design.gitee.io/index-cn' },
-      { name: 'react', link: 'https://react.docschina.org/tutorial/tutorial.html' },
-      { name: 'BiSheng', link: 'https://github.com/benjycui/bisheng' }]
-  },
+    sitename: 'react组件库包',
+    github: 'https://github.com/benjycui/bisheng',
+     },
   devServerConfig: {},
   webpackConfig(config) {
     config.devtool = 'source-map';
@@ -85,6 +83,7 @@ module.exports = {
     alertLessConfig(config.module.rules);
     alertCssConfig(config.module.rules);
     resetTsConfig(config.module.rules);
+    config.plugins.push(new CSSSplitWebpackPlugin({ size: 4000 }));
     return config;
   },
   root: `${filePath}/`

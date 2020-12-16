@@ -1,5 +1,5 @@
 {
-  "name": "z-react-pkg",
+  "name": "antd-bisheng-extend-pkg-template",
   "version": "0.0.1",
   "description": "react组件库包",
   "main": "lib/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "z-react-pkg/utils",
+  "name": "antd-bisheng-extend-pkg-template/utils",
   "private": true,
   "main": "../lib/utils.js",
   "module": "../es/utils.js"

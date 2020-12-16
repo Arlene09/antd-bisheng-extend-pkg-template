@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, './dist'),
-    library: 'z-react-pkg',
+    library: 'antd-bisheng-extend-pkg-template',
     libraryTarget: 'umd',
     sourceMapFilename: '[file].map', // string
   },

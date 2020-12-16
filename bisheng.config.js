@@ -52,10 +52,18 @@ module.exports = {
   entiryName: 'index',
   root: filePath,
   themeConfig: {
+    siteKey: 'antd-bisheng-extend-pkg-template',
     home: '/guide/introduce',
-    sitename: 'react组件库包',
-    github: 'https://github.com/benjycui/bisheng',
-     },
+    root: filePath,
+    combineChangelog: false,
+    compSorterType: 'native',
+    title: 'react组件库包',
+    github: 'https://github.com/Arlene09/antd-bisheng-extend-pkg-template',
+    friendLinks: [
+      { name: 'antd', link: 'https://ant-design.gitee.io/index-cn' },
+      { name: 'react', link: 'https://react.docschina.org/tutorial/tutorial.html' },
+      { name: 'BiSheng', link: 'https://github.com/benjycui/bisheng' }]
+  },
   devServerConfig: {},
   webpackConfig(config) {
     config.devtool = 'source-map';

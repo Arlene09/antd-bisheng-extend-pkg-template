@@ -1,5 +1,5 @@
 ---
-title: DModal 自定义动态表单组件
+title: DModal 模态框
 ---
 
 DModal

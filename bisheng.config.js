@@ -57,11 +57,11 @@ module.exports = {
     root: filePath,
     combineChangelog: false,
     compSorterType: 'native',
-    title: 'react组件库包',
+    title: 'React组件库包开发模板(antd、bisheng)',
     github: 'https://github.com/Arlene09/antd-bisheng-extend-pkg-template',
     friendLinks: [
-      { name: 'antd', link: 'https://ant-design.gitee.io/index-cn' },
-      { name: 'react', link: 'https://react.docschina.org/tutorial/tutorial.html' },
+      { name: 'Antd', link: 'https://ant-design.gitee.io/index-cn' },
+      { name: 'React', link: 'https://react.docschina.org/tutorial/tutorial.html' },
       { name: 'BiSheng', link: 'https://github.com/benjycui/bisheng' }]
   },
   devServerConfig: {},

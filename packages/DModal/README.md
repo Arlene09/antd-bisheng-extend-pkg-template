@@ -1,13 +1,13 @@
 ---
-title: HeaderMenu 自定义顶部菜单组件
+title: DModal 自定义动态表单组件
 ---
 
-HeaderMenu
+DModal
 ## 代码演示
 
 ## API
 
-### HeaderMenu 输入
+### DModal 输入
 | 参数      | 说明                                     | 类型       | 默认值 |
 |----------|------------------------------------------|-----------|-------|
 | visible | 原子类型，每次改变值的时候，会显示modal框 | Symbol |  |

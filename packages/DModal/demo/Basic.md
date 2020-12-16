@@ -8,13 +8,14 @@ order: 0
 ```jsx
 import React from 'react';
 import { Button } from 'antd';
-import HeaderMenu from "../index";
+// import { DModal } from 'antd-doddle';
+import DModal from "../index";
 
-function DetailHeaderMenu(props) {
+function DetailModal(props) {
     return (
-        <HeaderMenu title="测试框" {...props}>
+        <DModal title="测试框" {...props}>
             这是一个测试的modal
-        </HeaderMenu>
+        </DModal>
     );
 }
 
@@ -37,8 +38,8 @@ class Basic extends React.Component {
         }
         return (
             <div>
-                <Button type="primary" onClick={() => this.handleModal()}>预览顶部菜单</Button>
-                <DetailHeaderMenu {...modalProps}/> 
+                <Button type="primary" onClick={() => this.handleModal()}>普通模态框</Button>
+                <DetailModal {...modalProps}/>
             </div>
         );
 

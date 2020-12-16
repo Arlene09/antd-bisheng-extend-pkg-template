@@ -1,15 +1,25 @@
 import React from 'react';
-import { Menu } from 'antd';
-import { StateProps, MenuProps } from './interface';
+import { Modal } from 'antd';
 /**
- * 头部菜单组件
+ * 模态框组件
  *
- * @props visible Symbol类型参数，每次visible改变的时候，都会显示
- * @props {...menuProps} 参考antd Menu组件
+ * @props visible Symbol类型参数，每次visible改变的时候，都会显示模态框
+ * @props form 如果配置了form属性，则onOk属性会传递values,且只有在form validate success之后，才触发cancel逻辑
+ * @props {...modalProps} 参考antd 模态框组件
  */
+interface ModalProps {
+  visible: symbol,
+  confirmLoading?: boolean,
+  onCancel?: Function,
+  form?: any,
+  onOk?: Function
+}
 
+interface StateProps {
+  visible: boolean
+}
 
-export default class HeaderMenu extends React.PureComponent<MenuProps> {
+export default class DModal extends React.PureComponent<ModalProps> {
   state: StateProps
   constructor(props) {
     super(props);
@@ -88,22 +98,14 @@ export default class HeaderMenu extends React.PureComponent<MenuProps> {
     if (confirmLoading !== undefined) {
       confirmLoading = confirmLoading.valueOf();
     }
-    const menuProps = {
+    const modalProps = {
       ...this.props,
       confirmLoading,
       visible: true,
       onOk: this.handleOk,
       onCancel: this.handleCancel };
     return (
-      <div className="z-header-menu">
-        {
-          this.state.visible && 
-          <Menu {...menuProps} >
-            {this.props.children}
-            <span>顶部菜单--22--</span>
-          </Menu>
-        }
-      </div>
+      <div>{this.state.visible && <Modal {...modalProps} >{this.props.children}</Modal>}</div>
     );
   }
 }

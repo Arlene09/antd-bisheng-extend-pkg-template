@@ -1,7 +1,7 @@
 {
   "name": "antd-bisheng-extend-pkg-template",
   "version": "1.0.0",
-  "description": "React组件库包开发模板(antd、bisheng)",
+  "description": "npm包开发：React组件库包开发模板（拿来即用）使用bisheng搭建的antd组件扩展库",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
